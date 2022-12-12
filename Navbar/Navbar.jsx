@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import './Navbar.css';
-import { MenuItems } from '../MenuItems/MenuItems';
+import { MenuItems } from '../MenuItems';
 
 class Navbar extends Component {
   state = {clicked: false};
