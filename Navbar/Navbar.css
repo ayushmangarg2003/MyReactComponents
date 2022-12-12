@@ -1,0 +1,125 @@
+.NavbarItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+    width: 95%;
+    height: 80px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    border-radius: 13px;
+    transform: translate(-50%);
+}
+.NavbarLogo{
+    color: #222;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.NavMenu{
+    display: grid;
+    grid-template-columns: repeat(6 , auto);
+    grid-gap: 10px;
+    list-style-type: none;
+    align-items: center;
+}
+.NavLinks{
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+}
+.NavLinks i{
+    padding-right: 10px;
+}
+.NavLinks:hover{
+    background-color: #01959a;
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.25s ease-in-out;
+}
+.NavLinksMobile{
+    display: none;
+}
+.red{
+    color: #01959a;
+}
+button{
+    padding:0.5rem 1rem ;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+button:hover{
+    background-color: #151516;
+    color: white;
+}
+.MenuIcons{
+    display: none;
+}
+
+@media screen and (max-width: 930px){
+    .MenuIcons{
+        display: block;
+    }
+    .MenuIcons i{
+        font-size: 1.75rem;
+        color: #01959a;
+    }
+    .NavMenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        opacity: 0;
+        align-items: stretch;
+        padding: 120px 0 30px 0;
+        margin: 0;
+        transition: 0.3s ease;
+    }
+    .NavMenu.active{
+        top: 0;
+        opacity: 1;
+        z-index: -1;
+        transition: 0.3s ease;
+    }
+    .NavLinks{
+        text-align: center;
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 2rem 0;
+    }
+    .NavLinks:hover{
+        background-color: #01959a;
+        transition: none;
+    }
+    button{
+        display: none;
+    }
+    .NavLinksMobile{
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: auto;
+        border-radius: 4px;
+        width: 80%;
+        background: #01959a;
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+}
